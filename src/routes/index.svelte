@@ -8,8 +8,6 @@
 
   // Set up the db connection as an empty promise.
   $: conn_prom = new Promise(() => {})
-  $: paragraphs = []
-
 
   async function prep_db() {
     console.log("REPREPPING")
@@ -46,7 +44,7 @@
     years.push(y)
   }
 
-  $: results = null;
+  $: results = new Promise(() => {}); // unresolved
   async function get_year(year) {
     const conn = await conn_prom;
     results = conn.query(`

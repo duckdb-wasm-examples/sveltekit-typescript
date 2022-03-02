@@ -1,22 +1,14 @@
 <script>
-  export let paragraphs = [];
-  export let id = null;
-  export let selected_word = "";
-  export let haplaxes = [];
-  function select_paragraph(para_id) {
-    id = para_id;
-  }
+  export let results;
 </script>
-
-{#each paragraphs as [para_id, paragraph]}
-  <p class:bg-blue-100={id==para_id} class="rounded mt-3 text-sm">
-    <button class="rounded" on:click={() => select_paragraph(para_id)}>
-      <span class="text-xs">{para_id}</span>
-    </button>
-    { paragraph }
-  </p>
-{/each}
-
+{#await results}
+{:then values}
+  <h1>{values.get(0)['year']}</h1>
+  <h3>{values.get(0)['president']}, {values.get(0).party}</h3>
+  {#each [...values] as value}
+    <p id="para-{value.paragraph}">({value['paragraph']}) {value['nc:text']}</p>
+  {/each}
+{/await}
 <!--These are approximations of tailwind styles.-->
 <style>
   .bg-blue-100 {
