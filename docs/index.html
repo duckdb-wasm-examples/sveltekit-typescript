@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="/sveltekit-typescript-duckdb/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/sveltekit-typescript-duckdb/internal/assets/pages/index.svelte-1eaf42ac.css">
+	<link rel="modulepreload" href="/sveltekit-typescript-duckdb/internal/start-90a27d90.js">
+	<link rel="modulepreload" href="/sveltekit-typescript-duckdb/internal/chunks/vendor-7a87cf4c.js">
+	<link rel="modulepreload" href="/sveltekit-typescript-duckdb/internal/chunks/paths-4b3c6e7e.js">
+	<link rel="modulepreload" href="/sveltekit-typescript-duckdb/internal/layout.svelte-31f2772e.js">
+	<link rel="modulepreload" href="/sveltekit-typescript-duckdb/internal/pages/index.svelte-49fb56cb.js">
+	</head>
+	<body>
+		<div>
+
+
+<h1>Duck DB Svelte-kit demo</h1>
+
+<div class="description">This is a demo of a static, database-driven page using duckdb WASM.
+  All the primary text is stored in a parquet file structured to the <a href="https://nonconsumptive.org">nonconsumptive</a> text sharing spec. On load, it gets a copy of duckdb WASM and uses it to mount 
+  the parquet file into the database. Clicking on any year will load the state of the Union address for that year.
+</div>
+
+<div class="years svelte-c41948"><div class="year svelte-c41948">1934</div><div class="year svelte-c41948">1935</div><div class="year svelte-c41948">1936</div><div class="year svelte-c41948">1937</div><div class="year svelte-c41948">1938</div><div class="year svelte-c41948">1939</div><div class="year svelte-c41948">1940</div><div class="year svelte-c41948">1941</div><div class="year svelte-c41948">1942</div><div class="year svelte-c41948">1943</div><div class="year svelte-c41948">1944</div><div class="year svelte-c41948">1945</div><div class="year svelte-c41948">1946</div><div class="year svelte-c41948">1947</div><div class="year svelte-c41948">1948</div><div class="year svelte-c41948">1949</div><div class="year svelte-c41948">1950</div><div class="year svelte-c41948">1951</div><div class="year svelte-c41948">1952</div><div class="year svelte-c41948">1953</div><div class="year svelte-c41948">1954</div><div class="year svelte-c41948">1955</div><div class="year svelte-c41948">1956</div><div class="year svelte-c41948">1957</div><div class="year svelte-c41948">1958</div><div class="year svelte-c41948">1959</div><div class="year svelte-c41948">1960</div><div class="year svelte-c41948">1961</div><div class="year svelte-c41948">1962</div><div class="year svelte-c41948">1963</div><div class="year svelte-c41948">1964</div><div class="year svelte-c41948">1965</div><div class="year svelte-c41948">1966</div><div class="year svelte-c41948">1967</div><div class="year svelte-c41948">1968</div><div class="year svelte-c41948">1969</div><div class="year svelte-c41948">1970</div><div class="year svelte-c41948">1971</div><div class="year svelte-c41948">1972</div><div class="year svelte-c41948">1973</div><div class="year svelte-c41948">1974</div><div class="year svelte-c41948">1975</div><div class="year svelte-c41948">1976</div><div class="year svelte-c41948">1977</div><div class="year svelte-c41948">1978</div><div class="year svelte-c41948">1979</div><div class="year svelte-c41948">1980</div><div class="year svelte-c41948">1981</div><div class="year svelte-c41948">1982</div><div class="year svelte-c41948">1983</div><div class="year svelte-c41948">1984</div><div class="year svelte-c41948">1985</div><div class="year svelte-c41948">1986</div><div class="year svelte-c41948">1987</div><div class="year svelte-c41948">1988</div><div class="year svelte-c41948">1989</div><div class="year svelte-c41948">1990</div><div class="year svelte-c41948">1991</div><div class="year svelte-c41948">1992</div><div class="year svelte-c41948">1993</div><div class="year svelte-c41948">1994</div><div class="year svelte-c41948">1995</div><div class="year svelte-c41948">1996</div><div class="year svelte-c41948">1997</div><div class="year svelte-c41948">1998</div><div class="year svelte-c41948">1999</div><div class="year svelte-c41948">2000</div><div class="year svelte-c41948">2001</div><div class="year svelte-c41948">2002</div><div class="year svelte-c41948">2003</div><div class="year svelte-c41948">2004</div><div class="year svelte-c41948">2005</div><div class="year svelte-c41948">2006</div><div class="year svelte-c41948">2007</div><div class="year svelte-c41948">2008</div><div class="year svelte-c41948">2009</div><div class="year svelte-c41948">2010</div><div class="year svelte-c41948">2011</div><div class="year svelte-c41948">2012</div><div class="year svelte-c41948">2013</div><div class="year svelte-c41948">2014</div><div class="year svelte-c41948">2015</div><div class="year svelte-c41948">2016</div><div class="year svelte-c41948">2017</div><div class="year svelte-c41948">2018</div><div class="year svelte-c41948">2019</div><div class="year svelte-c41948">2020</div></div>
+
+   Preparing database...
+  <div id="loading" class="svelte-qfy6rn"></div>
+
+
+
+		<script type="module" data-hydrate="vk6sa0">
+		import { start } from "/sveltekit-typescript-duckdb/internal/start-90a27d90.js";
+		start({
+			target: document.querySelector('[data-hydrate="vk6sa0"]').parentNode,
+			paths: {"base":"/sveltekit-typescript-duckdb","assets":"/sveltekit-typescript-duckdb"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/sveltekit-typescript-duckdb/internal/layout.svelte-31f2772e.js"),
+						import("/sveltekit-typescript-duckdb/internal/pages/index.svelte-49fb56cb.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>
