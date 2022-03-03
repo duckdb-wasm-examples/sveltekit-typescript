@@ -34,9 +34,9 @@
   }
 
   // Only run in browser. I wonder if anyone can improve on this.
-  if (browser) {    
+//  if (browser) {    
     load_db()
-  }
+//  }
 
   const years = []
   // We could get this from the database, but no need to show off.

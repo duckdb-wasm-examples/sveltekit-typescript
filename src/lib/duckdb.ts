@@ -1,6 +1,9 @@
 import * as duckdb from '@duckdb/duckdb-wasm';
 import duckdb_wasm from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-mvp.wasm?url';
 import duckdb_wasm_eh from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-eh.wasm?url';
+import Worker from 'web-worker';
+globalThis.Worker = Worker; // polyfill Worker for node.
+
 import duckdb_worker from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-browser-mvp.worker.js?worker';
 import duckdb_worker_eh from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-browser-eh.worker.js?worker';
 

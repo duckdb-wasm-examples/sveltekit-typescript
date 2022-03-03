@@ -12,7 +12,7 @@ const config = {
 			assets: 'docs',
 		}),
 		paths: {
-			base: '/sveltekit-typescript-duckdb'
+			base: '/sveltekit-typescript'
 		},
 		appDir: 'internal', // For github pages: https://www.npmjs.com/package/@sveltejs/adapter-static/v/next
 	}

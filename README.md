@@ -6,4 +6,4 @@ for the tags.
 
 It doesn't properly negotiate the different bundles, but everything else seems to work.
 
-Example using adapter static [on github pages](https://bmschmidt.github.io/sveltekit-typescript-duckdb/)
+Example using adapter static [on github pages](https://duckdb-wasm-examples.github.io/sveltekit-typescript/)
