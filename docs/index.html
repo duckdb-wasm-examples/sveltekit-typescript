@@ -6,12 +6,12 @@
 		<link rel="icon" href="/sveltekit-typescript/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/sveltekit-typescript/internal/immutable/assets/pages/index.svelte-bc460ace.css">
-	<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/start-259d7cea.js">
-	<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/chunks/index-d5dbec58.js">
-	<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/layout.svelte-cc70c201.js">
-	<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/pages/index.svelte-b9507721.js">
+	<link rel="stylesheet" href="/sveltekit-typescript/internal/assets/pages/index.svelte-bc460ace.css">
+	<link rel="modulepreload" href="/sveltekit-typescript/internal/start-920535d5.js">
+	<link rel="modulepreload" href="/sveltekit-typescript/internal/chunks/index-d5dbec58.js">
+	<link rel="modulepreload" href="/sveltekit-typescript/internal/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/sveltekit-typescript/internal/layout.svelte-cc70c201.js">
+	<link rel="modulepreload" href="/sveltekit-typescript/internal/pages/index.svelte-b9507721.js">
 	</head>
 	<body>
 		<div>
@@ -32,7 +32,7 @@
 
 
 		<script type="module" data-sveltekit-hydrate="vk6sa0">
-		import { start } from "/sveltekit-typescript/internal/immutable/start-259d7cea.js";
+		import { start } from "/sveltekit-typescript/internal/start-920535d5.js";
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="vk6sa0"]').parentNode,
 			paths: {"base":"/sveltekit-typescript","assets":"/sveltekit-typescript"},
@@ -43,7 +43,10 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 2],
+				nodes: [
+					import("/sveltekit-typescript/internal/layout.svelte-cc70c201.js"),
+						import("/sveltekit-typescript/internal/pages/index.svelte-b9507721.js")
+				],
 				params: {},
 				routeId: ""
 			}
