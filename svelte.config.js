@@ -14,6 +14,9 @@ const config = {
 		paths: {
 			base: '/sveltekit-typescript'
 		},
+		prerender: {
+			default: true
+		},
 		appDir: 'internal', // For github pages: https://www.npmjs.com/package/@sveltejs/adapter-static/v/next
 	}
 };
