@@ -1,20 +1,16 @@
 import * as duckdb from '@duckdb/duckdb-wasm';
-import duckdb_wasm from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-mvp.wasm?url';
-import duckdb_wasm_eh from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-eh.wasm?url';
 import Worker from 'web-worker';
+import { base } from '$app/paths'
 globalThis.Worker = Worker; // polyfill Worker for node.
-
-import duckdb_worker from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-browser-mvp.worker.js?worker';
-import duckdb_worker_eh from '/node_modules/@duckdb/duckdb-wasm/dist/duckdb-browser-eh.worker.js?worker';
 
 const DUCKDB_BUNDLES: duckdb.DuckDBBundles = {
 	mvp: {
-		mainModule: duckdb_wasm,
-		mainWorker: duckdb_worker,
+		mainModule:`${base}/duckdb-wasm-mvp.wasm`,
+		mainWorker: `${base}/duckdb-wasm-mvp.worker`,
 	},
 	eh: {
-		mainModule: duckdb_wasm_eh,
-		mainWorker: duckdb_worker_eh,
+		mainModule:`${base}/duckdb-wasm-eh.wasm`,
+		mainWorker: `${base}/duckdb-wasm-eh.worker`,
 	},
 };
 
@@ -26,12 +22,16 @@ export const initDB = async (path : string, fname : string) => {
   if (fname == undefined) {
     fname = path.split("/").pop()
   }
-//	const bundle = await duckdb.selectBundle(DUCKDB_BUNDLES);
+	const bundle = await duckdb.selectBundle(DUCKDB_BUNDLES);
+	console.log({bundle})
 	const logger = new duckdb.ConsoleLogger();
-	const worker = new duckdb_worker();
+	const worker = new Worker(bundle.mainWorker);
 	db = new duckdb.AsyncDuckDB(logger, worker);
-	await db.instantiate(duckdb_wasm);
+	// launder the url to a string to ensure building.
+	await db.instantiate(bundle.mainModule);
   const parquet = await fetch(path).then(d => d.arrayBuffer());
+	console.log("foo")
+
   await db.registerFileBuffer(fname, new Uint8Array(parquet));
 	return db;
 };
