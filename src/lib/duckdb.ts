@@ -19,18 +19,16 @@ export const initDB = async (path : string, fname : string) => {
   if (db) {
     return db
   }
-  if (fname == undefined) {
+  if (fname === undefined) {
     fname = path.split("/").pop()
   }
 	const bundle = await duckdb.selectBundle(DUCKDB_BUNDLES);
-	console.log({bundle})
 	const logger = new duckdb.ConsoleLogger();
 	const worker = new Worker(bundle.mainWorker);
 	db = new duckdb.AsyncDuckDB(logger, worker);
 	// launder the url to a string to ensure building.
 	await db.instantiate(bundle.mainModule);
   const parquet = await fetch(path).then(d => d.arrayBuffer());
-	console.log("foo")
 
   await db.registerFileBuffer(fname, new Uint8Array(parquet));
 	return db;
