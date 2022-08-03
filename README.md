@@ -6,4 +6,14 @@ for the tags.
 
 It doesn't properly negotiate the different bundles, but everything else seems to work.
 
-Example using adapter static [on github pages](https://duckdb-wasm-examples.github.io/sveltekit-typescript/)
+Example using adapter static [on github pages](https://duckdb-wasm-examples.github.io/sveltekit-typescript/).
+
+To run locally:
+
+`
+https://github.com/duckdb-wasm-examples/sveltekit-typescript
+npm i
+npm run dev
+`
+
+and visit `http://localhost:1922/sveltekit-typescript`.
