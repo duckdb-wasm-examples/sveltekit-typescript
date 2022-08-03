@@ -10,10 +10,10 @@ Example using adapter static [on github pages](https://duckdb-wasm-examples.gith
 
 To run locally:
 
-`
-https://github.com/duckdb-wasm-examples/sveltekit-typescript
+```sh
+git clone https://github.com/duckdb-wasm-examples/sveltekit-typescript
 npm i
 npm run dev
-`
+```
 
 and visit `http://localhost:1922/sveltekit-typescript`.
