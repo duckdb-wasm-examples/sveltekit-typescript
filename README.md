@@ -11,7 +11,8 @@ Example using adapter static [on github pages](https://duckdb-wasm-examples.gith
 To run locally:
 
 ```sh
-git clone https://github.com/duckdb-wasm-examples/sveltekit-typescript
+git clone https://github.com/duckdb-wasm-examples/sveltekit-typescript sveltekit-typescript
+cd sveltekit-typescript
 npm i
 npm run dev
 ```
