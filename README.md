@@ -17,4 +17,4 @@ npm i
 npm run dev
 ```
 
-and visit `http://localhost:1922/sveltekit-typescript`.
+and visit `http://localhost:1922`.
