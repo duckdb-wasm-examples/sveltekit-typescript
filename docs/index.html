@@ -3,25 +3,38 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="" />
-		<link rel="icon" href="/sveltekit-typescript/favicon.png" />
+		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/start-31b09c91.js">
-		<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/chunks/index-5f61433e.js">
-		<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/chunks/singletons-c74efc9d.js">
-		<link rel="modulepreload" href="/sveltekit-typescript/internal/immutable/chunks/paths-b4419565.js">
+		
+		<link rel="modulepreload" href="./internal/immutable/entry/start.pcRCx5Ww.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/entry.ClBLOP0T.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/runtime.CoQ7hKXU.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/paths.CUJp4_nD.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/index-client.DJH4y2Tx.js">
+		<link rel="modulepreload" href="./internal/immutable/entry/app.BLD608SE.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/preload-helper.sQ-3-82f.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/render.D4oYIA4h.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/disclose-version.DDrOHCmQ.js">
 	</head>
 	<body>
 		<div>
-		<script type="module" data-sveltekit-hydrate="45h">
-			import { start } from "/sveltekit-typescript/internal/immutable/start-31b09c91.js";
+			<script>
+				{
+					__sveltekit_1v60s35 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/sveltekit-typescript"
+					};
 
-			start({
-				env: {},
-				paths: {"base":"/sveltekit-typescript","assets":"/sveltekit-typescript"},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				version: "1672502356740"
-			});
-		</script></div>
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./internal/immutable/entry/start.pcRCx5Ww.js"),
+						import("./internal/immutable/entry/app.BLD608SE.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
 	</body>
 </html>
