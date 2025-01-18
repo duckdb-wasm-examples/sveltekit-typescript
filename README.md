@@ -4,8 +4,6 @@ Andre Kohn has a base svelte example, but it requires a lot of rollup configurat
 and I want to see how far you can get using vite's built-in `?worker` and `?url` loaders
 for the tags.
 
-It doesn't properly negotiate the different bundles, but everything else seems to work.
-
 Example using adapter static [on github pages](https://duckdb-wasm-examples.github.io/sveltekit-typescript/).
 
 To run locally:
